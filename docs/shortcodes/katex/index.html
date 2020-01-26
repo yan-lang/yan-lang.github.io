@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Katex"><meta property="og:title" content="" />
+<meta property="og:description" content="KaTeX KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
+Example {{&lt; katex [display] [class=&#34;text-center&#34;] &gt;}} x = \begin{cases} a &amp;\text{if } b \\ c &amp;\text{if } d \end{cases} {{&lt; /katex &gt;}}     \( x = \begin{cases} a &\text{if } b \\ c &\text{if } d \end{cases} \)    Display Mode Example Here is some inline example: \(\pi(x)\)  , rendered in the same line." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="yan-lang.github.io/docs/shortcodes/katex/" />
+
+<title>Katex | Yan</title>
+<link rel="icon" href="/yan-lang.github.io/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/yan-lang.github.io/book.min.4cb1e7da04b500afd6618961c4a32bc593857ceee66b11207e0449effc5ba8ba.css" integrity="sha256-TLHn2gS1AK/WYYlhxKMrxZOFfO7maxEgfgRJ7/xbqLo=">
+
+
+<script defer src="/yan-lang.github.io/en.search.min.b2aae9030f76fe1122cd5dad3d13cd90b51ce6a92601110825101c1a4d219e31.js" integrity="sha256-sqrpAw92/hEizV2tPRPNkLUc5qkmAREIJRAcGk0hnjE="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/yan-lang.github.io"><img src="/yan-lang.github.io/logo.png" alt="Logo" /><span>Yan</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+  <ul>
+<li>
+<ul>
+<li><a href="yan-lang.github.io/docs/example/">About Yan</a></li>
+<li><a href="yan-lang.github.io/posts/">Blog</a></li>
+<li><a href="yan-lang.github.io/docs/example/table-of-contents/">Download</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/">Getting Started</a></li>
+<li><a href="yan-lang.github.io/docs/example/table-of-contents/with-toc/">Documentation</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/3rd/">Source Code</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/3rd/4th/">Contributing</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Labs</strong></p>
+<ul>
+<li><a href="yan-lang.github.io/docs/shortcodes/buttons/">Starter Code</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Projects</strong></p>
+<ul>
+<li><a href="yan-lang.github.io/docs/shortcodes/buttons/">Compiler</a></li>
+<li><a href="yan-lang.github.io/docs/shortcodes/columns/">REPL</a></li>
+<li><a href="yan-lang.github.io/docs/shortcodes/columns/">Plugins</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/yan-lang.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Katex</strong>
+
+  <label for="toc-control">
+    <img src="/yan-lang.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#katex">KaTeX</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#display-mode-example">Display Mode Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+<article class="markdown"><h1 id="katex">KaTeX</h1>
+<p>KaTeX shortcode let you render math typesetting in markdown document. See <a href="https://katex.org/">KaTeX</a></p>
+<h2 id="example">Example</h2>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex">{{&lt; katex [display] [class=&#34;text-center&#34;]  &gt;}}
+x = <span style="color:#66d9ef">\begin</span>{cases}
+   a &amp;<span style="color:#66d9ef">\text</span>{if } b <span style="color:#66d9ef">\\</span>
+   c &amp;<span style="color:#66d9ef">\text</span>{if } d
+<span style="color:#66d9ef">\end</span>{cases}
+{{&lt; /katex &gt;}}
+</code></pre></div>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<span class="katex">
+  \(
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+\)
+</span>
+  </div>
+  
+</div>
+
+<h2 id="display-mode-example">Display Mode Example</h2>
+<p>Here is some inline example: 
+
+<span class="katex">
+  \(\pi(x)\)
+</span>
+, rendered in the same line. And below is <code>display</code> example, having <code>display: block</code>
+
+
+<span class="katex">
+  \[
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+\]
+</span>
+
+Text continues here.</p>
+</article>
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+  
+
+
+  
+
+  
+
+
+  
+
+
+<div class="book-languages">
+
+  <ul>
+    <li class="flex">
+      <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="">
+      <a href="yan-lang.github.io/cn/docs/shortcodes/katex/" class="flex">
+        <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+        简体中文
+      </a>
+    </li>
+    
+    <li class="active">
+      <a href="yan-lang.github.io/" class="flex">
+        <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+  </ul>
+
+</div>
+
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/yan-lang/yanlang-website/commit/a449880f79922fad8f85ca661282a22fb7a4d5ac" title='Last modified by laizeqiang | Jan 26, 2020' target="_blank" rel="noopener">
+      <img src="/yan-lang.github.io/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 26, 2020</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#katex">KaTeX</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+        <li><a href="#display-mode-example">Display Mode Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

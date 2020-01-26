@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Buttons"><meta property="og:title" content="" />
+<meta property="og:description" content="Buttons Buttons are styled links that can lead to local page or external link.
+{{&lt; button relref=&#34;/&#34; [class=&#34;...&#34;] &gt;}}Get Home{{&lt; /button &gt;}} {{&lt; button href=&#34;https://github.com/alex-shpak/hugo-book&#34; &gt;}}Contribute{{&lt; /button &gt;}} Example  Get Home  Contribute  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="yan-lang.github.io/docs/shortcodes/buttons/" />
+
+<title>Buttons | Yan</title>
+<link rel="icon" href="/yan-lang.github.io/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/yan-lang.github.io/book.min.4cb1e7da04b500afd6618961c4a32bc593857ceee66b11207e0449effc5ba8ba.css" integrity="sha256-TLHn2gS1AK/WYYlhxKMrxZOFfO7maxEgfgRJ7/xbqLo=">
+
+
+<script defer src="/yan-lang.github.io/en.search.min.b2aae9030f76fe1122cd5dad3d13cd90b51ce6a92601110825101c1a4d219e31.js" integrity="sha256-sqrpAw92/hEizV2tPRPNkLUc5qkmAREIJRAcGk0hnjE="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/yan-lang.github.io"><img src="/yan-lang.github.io/logo.png" alt="Logo" /><span>Yan</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+  <ul>
+<li>
+<ul>
+<li><a href="yan-lang.github.io/docs/example/">About Yan</a></li>
+<li><a href="yan-lang.github.io/posts/">Blog</a></li>
+<li><a href="yan-lang.github.io/docs/example/table-of-contents/">Download</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/">Getting Started</a></li>
+<li><a href="yan-lang.github.io/docs/example/table-of-contents/with-toc/">Documentation</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/3rd/">Source Code</a></li>
+<li><a href="yan-lang.github.io/docs/example/2nd/3rd/4th/">Contributing</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Labs</strong></p>
+<ul>
+<li><a href="yan-lang.github.io/docs/shortcodes/buttons/"class=active>Starter Code</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Projects</strong></p>
+<ul>
+<li><a href="yan-lang.github.io/docs/shortcodes/buttons/"class=active>Compiler</a></li>
+<li><a href="yan-lang.github.io/docs/shortcodes/columns/">REPL</a></li>
+<li><a href="yan-lang.github.io/docs/shortcodes/columns/">Plugins</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/yan-lang.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Buttons</strong>
+
+  <label for="toc-control">
+    <img src="/yan-lang.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#buttons">Buttons</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+<article class="markdown"><h1 id="buttons">Buttons</h1>
+<p>Buttons are styled links that can lead to local page or external link.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{</span><span style="color:#75715e">{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">button</span> <span style="color:#a6e22e">relref</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}</span><span style="color:#75715e">}</span>Get Home<span style="color:#75715e">{</span><span style="color:#75715e">{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">button</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}</span><span style="color:#75715e">}</span>
+<span style="color:#75715e">{</span><span style="color:#75715e">{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">button</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/alex-shpak/hugo-book&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}</span><span style="color:#75715e">}</span>Contribute<span style="color:#75715e">{</span><span style="color:#75715e">{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">button</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}</span><span style="color:#75715e">}</span>
+</code></pre></div><h2 id="example">Example</h2>
+<p>
+
+
+
+  
+
+<a  href="yan-lang.github.io/"   class="book-btn">
+  Get Home
+</a>
+
+
+
+
+  
+  
+
+
+<a  href="https://github.com/alex-shpak/hugo-book"   target="_blank"  class="book-btn">
+  Contribute
+</a>
+</p>
+</article>
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+  
+
+
+  
+
+  
+
+
+  
+
+
+<div class="book-languages">
+
+  <ul>
+    <li class="flex">
+      <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="">
+      <a href="yan-lang.github.io/cn/docs/shortcodes/buttons/" class="flex">
+        <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+        简体中文
+      </a>
+    </li>
+    
+    <li class="active">
+      <a href="yan-lang.github.io/" class="flex">
+        <img src="/yan-lang.github.io/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+  </ul>
+
+</div>
+
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/yan-lang/yanlang-website/commit/a449880f79922fad8f85ca661282a22fb7a4d5ac" title='Last modified by laizeqiang | Jan 26, 2020' target="_blank" rel="noopener">
+      <img src="/yan-lang.github.io/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jan 26, 2020</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#buttons">Buttons</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
