@@ -30,6 +30,20 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
+      <title>为Hugo添加Yan语言代码高亮支持</title>
+      <link>https://yan-lang.github.io/cn/posts/syntax-highlight-in-hugo/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/cn/posts/syntax-highlight-in-hugo/</guid>
+      <description>&lt;p&gt;为了能让文档阅读起来更顺畅，更美观，我们通常会高亮文档中出现的代码。Hugo使用高亮器&lt;a href=&#34;&#34;&gt;chroma&lt;/a&gt;来对代码进行分析实现代码高亮，但是chroma不支持我们自己定义的语言Yan。&lt;/p&gt;
+&lt;blockquote class=&#34;book-hint info&#34;&gt;
+  另一种高亮器是Pygments, 但是Hugo自0.6版本后就删除了使用pygments作为高亮器的选项。
+&lt;/blockquote&gt;
+
+&lt;p&gt;为了能让Hugo支持高亮Yan语言，我们可以修改chroma或Pygments让它们支持高亮Yan语言，再重新编译Hugo，安装，但是，这种方法太麻烦了。因此，这里我们采用另一种方式进行workaround。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Creating a New Theme</title>
       <link>https://yan-lang.github.io/cn/posts/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
