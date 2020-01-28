@@ -228,21 +228,6 @@
   </url>
   
   <url>
-    <loc>https://yan-lang.github.io/categories/golang/</loc>
-    <lastmod>2020-01-26T21:51:07+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://yan-lang.github.io/cn/categories/golang/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yan-lang.github.io/categories/golang/"
-                />
-  </url>
-  
-  <url>
     <loc>https://yan-lang.github.io/tags/golang/</loc>
     <lastmod>2020-01-26T21:51:07+08:00</lastmod>
     <xhtml:link
@@ -254,6 +239,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yan-lang.github.io/tags/golang/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/categories/golang/</loc>
+    <lastmod>2020-01-26T21:51:07+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://yan-lang.github.io/cn/categories/golang/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yan-lang.github.io/categories/golang/"
                 />
   </url>
   
@@ -318,6 +318,26 @@
   </url>
   
   <url>
+    <loc>https://yan-lang.github.io/docs/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/code/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/contributing/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/download/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yan-lang.github.io/docs/example/2nd/3rd/4th/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -360,6 +380,11 @@
                 hreflang="en"
                 href="https://yan-lang.github.io/docs/example/hidden/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/get_start/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

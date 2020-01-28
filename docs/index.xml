@@ -9,5 +9,58 @@
 	<atom:link href="https://yan-lang.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/docs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/docs/about/</guid>
+      <description>About Yan </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/docs/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/docs/code/</guid>
+      <description>Source Code </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/docs/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/docs/contributing/</guid>
+      <description>Contributing </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/docs/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/docs/download/</guid>
+      <description>Download MacOS  MacOS This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes. Miseratus fonte Ditis conubia.
+ Linux  Linux This is tab Linux content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/docs/get_start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/docs/get_start/</guid>
+      <description>Getting Started Download the precompiled jar file Yan.jar.zip.
+Open a terminal, and type the following command (requires JRE)
+java -jar yan.jar This command will launch the Yan interpreter, and you can type in any code Yan supports.
+Have a try by yourself !
+Language Guide To print a string &amp;ldquo;Hello, world.&amp;rdquo; on the screen, just type in the following statement.
+print(&amp;#34;hello, world&amp;#34;);  A semicolon is required at the end of each line.</description>
+    </item>
+    
   </channel>
 </rss>
