@@ -14,10 +14,10 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.6cc3ba4115c441b6558dae6a9deb631230d48710d8bd7f672f5e5f18652eb57e.css" integrity="sha256-bMO6QRXEQbZVja5qnetjEjDUhxDYvX9nL15fGGUutX4=">
+<link rel="stylesheet" href="/book.min.29a44f6b0f8dc44454463097afb8d467ebe88d0c0fdc542e2a42ebe35ef6ecfd.css" integrity="sha256-KaRPaw&#43;NxERURjCXr7jUZ&#43;vojQwP3FQuKkLr41727P0=">
 
 
-<script defer src="/en.search.min.d256b165fdb033caa60f3ed8b474881abd082206953f45bb7b7ad76b98da663b.js" integrity="sha256-0laxZf2wM8qmDz7YtHSIGr0IIgaVP0W7e3rXa5jaZjs="></script>
+<script defer src="/en.search.min.0441368588e4d049adfff2e2f4cf9e1ffd1c5ed9a710cca1f64fb484d1db5afb.js" integrity="sha256-BEE2hYjk0Emt//Li9M&#43;eH/0cXtmnEMyh9k&#43;0hNHbWvs="></script>
 
 <!--
 Made with Book Theme
@@ -130,8 +130,7 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#扩展内容">扩展内容</a>
           <ul>
-            <li><a href="#linereaderoption">LineReader.option</a></li>
-            <li><a href="#linereadervariable">LineReader.variable</a></li>
+            <li><a href="#option--variable">Option & Variable</a></li>
             <li><a href="#自动缩进">自动缩进</a></li>
           </ul>
         </li>
@@ -217,8 +216,8 @@ LineReader reader <span style="font-weight:bold">=</span> LineReaderBuilder<span
 </code></pre></div><p><strong>运行时</strong>要求两个jar在同一个文件夹中。</p>
 <p>参考资料: <a href="https://stackoverflow.com/questions/16499084/java-exception-exception-in-thread-main-java-lang-noclassdeffounderror-net-s">https://stackoverflow.com/questions/16499084/java-exception-exception-in-thread-main-java-lang-noclassdeffounderror-net-s</a></p>
 <h2 id="扩展内容">扩展内容</h2>
-<h3 id="linereaderoption">LineReader.option</h3>
-<h3 id="linereadervariable">LineReader.variable</h3>
+<h3 id="option--variable">Option &amp; Variable</h3>
+<p>通过<code>LineReader.option</code>和<code>LineReader.variable</code>可以对LineReader进行详细的配置。</p>
 <h3 id="自动缩进">自动缩进</h3>
 <p>配置自动缩进：</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">LineReader reader <span style="font-weight:bold">=</span> LineReaderBuilder<span style="font-weight:bold">.</span><span style="color:#008080">builder</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">.</span><span style="color:#008080">variable</span><span style="font-weight:bold">(</span>LineReader<span style="font-weight:bold">.</span><span style="color:#008080">INDENTATION</span><span style="font-weight:bold">,</span> 2<span style="font-weight:bold">)</span>
@@ -233,64 +232,8 @@ LineReader reader <span style="font-weight:bold">=</span> LineReaderBuilder<span
 <li>历史记录</li>
 <li>&hellip;</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="font-weight:bold">package</span> <span style="color:#555">com.yan</span><span style="font-weight:bold">;</span>
-
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.builtins.Widgets</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.EndOfFileException</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.LineReader</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.LineReaderBuilder</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.UserInterruptException</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.impl.DefaultParser</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.reader.impl.DefaultParser.Bracket</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.terminal.Terminal</span><span style="font-weight:bold">;</span>
-<span style="font-weight:bold">import</span> <span style="color:#555">org.jline.terminal.TerminalBuilder</span><span style="font-weight:bold">;</span>
-
-<span style="font-weight:bold">import</span> <span style="color:#555">java.io.IOException</span><span style="font-weight:bold">;</span>
-
-<span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="color:#458;font-weight:bold">Main</span> <span style="font-weight:bold">{</span>
-    <span style="font-weight:bold">public</span> <span style="font-weight:bold">static</span> <span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">main</span><span style="font-weight:bold">(</span>String<span style="font-weight:bold">[</span><span style="font-weight:bold">]</span> args<span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-        <span style="font-weight:bold">try</span> <span style="font-weight:bold">{</span>
-            DefaultParser parser <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> DefaultParser<span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-            parser<span style="font-weight:bold">.</span><span style="color:#008080">setEofOnUnclosedBracket</span><span style="font-weight:bold">(</span>Bracket<span style="font-weight:bold">.</span><span style="color:#008080">CURLY</span><span style="font-weight:bold">,</span> Bracket<span style="font-weight:bold">.</span><span style="color:#008080">ROUND</span><span style="font-weight:bold">,</span> Bracket<span style="font-weight:bold">.</span><span style="color:#008080">SQUARE</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-            parser<span style="font-weight:bold">.</span><span style="color:#008080">setEofOnUnclosedQuote</span><span style="font-weight:bold">(</span><span style="font-weight:bold">true</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-            parser<span style="font-weight:bold">.</span><span style="color:#008080">setEscapeChars</span><span style="font-weight:bold">(</span><span style="font-weight:bold">null</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-
-            Terminal terminal <span style="font-weight:bold">=</span> TerminalBuilder<span style="font-weight:bold">.</span><span style="color:#008080">builder</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">.</span><span style="color:#008080">build</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-
-            LineReader reader <span style="font-weight:bold">=</span> LineReaderBuilder<span style="font-weight:bold">.</span><span style="color:#008080">builder</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span>
-                    <span style="font-weight:bold">.</span><span style="color:#008080">terminal</span><span style="font-weight:bold">(</span>terminal<span style="font-weight:bold">)</span>
-                    <span style="font-weight:bold">.</span><span style="color:#008080">parser</span><span style="font-weight:bold">(</span>parser<span style="font-weight:bold">)</span>
-                    <span style="font-weight:bold">.</span><span style="color:#008080">variable</span><span style="font-weight:bold">(</span>LineReader<span style="font-weight:bold">.</span><span style="color:#008080">SECONDARY_PROMPT_PATTERN</span><span style="font-weight:bold">,</span> <span style="color:#b84">&#34;   \u001b[38;5;250m%N. &#34;</span><span style="font-weight:bold">)</span>
-                    <span style="font-weight:bold">.</span><span style="color:#008080">variable</span><span style="font-weight:bold">(</span>LineReader<span style="font-weight:bold">.</span><span style="color:#008080">INDENTATION</span><span style="font-weight:bold">,</span> 2<span style="font-weight:bold">)</span>
-                    <span style="font-weight:bold">.</span><span style="color:#008080">build</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-
-<span style="color:#998;font-style:italic">//          Create autopair widgets
-</span><span style="color:#998;font-style:italic"></span>            Widgets<span style="font-weight:bold">.</span><span style="color:#008080">AutopairWidgets</span> autopairWidgets <span style="font-weight:bold">=</span> <span style="font-weight:bold">new</span> Widgets<span style="font-weight:bold">.</span><span style="color:#008080">AutopairWidgets</span><span style="font-weight:bold">(</span>reader<span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-<span style="color:#998;font-style:italic">//          Enable autopair
-</span><span style="color:#998;font-style:italic"></span>            autopairWidgets<span style="font-weight:bold">.</span><span style="color:#008080">enable</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-
-            String prompt <span style="font-weight:bold">=</span> <span style="color:#b84">&#34;   \u001b[38;5;250m%N&gt; &#34;</span><span style="font-weight:bold">;</span>
-            <span style="color:#458;font-weight:bold">int</span> count <span style="font-weight:bold">=</span> 1<span style="font-weight:bold">;</span>
-            <span style="font-weight:bold">while</span> <span style="font-weight:bold">(</span><span style="font-weight:bold">true</span><span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-                String line <span style="font-weight:bold">=</span> <span style="font-weight:bold">null</span><span style="font-weight:bold">;</span>
-                <span style="font-weight:bold">try</span> <span style="font-weight:bold">{</span>
-                    reader<span style="font-weight:bold">.</span><span style="color:#008080">variable</span><span style="font-weight:bold">(</span>LineReader<span style="font-weight:bold">.</span><span style="color:#008080">LINE_OFFSET</span><span style="font-weight:bold">,</span> count<span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-                    line <span style="font-weight:bold">=</span> reader<span style="font-weight:bold">.</span><span style="color:#008080">readLine</span><span style="font-weight:bold">(</span>prompt<span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-                    System<span style="font-weight:bold">.</span><span style="color:#008080">out</span><span style="font-weight:bold">.</span><span style="color:#008080">println</span><span style="font-weight:bold">(</span>line<span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-                    count <span style="font-weight:bold">+</span><span style="font-weight:bold">=</span> line<span style="font-weight:bold">.</span><span style="color:#008080">split</span><span style="font-weight:bold">(</span><span style="color:#b84">&#34;\r\n|\r|\n&#34;</span><span style="font-weight:bold">)</span><span style="font-weight:bold">.</span><span style="color:#008080">length</span><span style="font-weight:bold">;</span>
-                <span style="font-weight:bold">}</span> <span style="font-weight:bold">catch</span> <span style="font-weight:bold">(</span>UserInterruptException e<span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-                    <span style="color:#998;font-style:italic">// Ignore
-</span><span style="color:#998;font-style:italic"></span>                <span style="font-weight:bold">}</span> <span style="font-weight:bold">catch</span> <span style="font-weight:bold">(</span>EndOfFileException e<span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-                    <span style="font-weight:bold">return</span><span style="font-weight:bold">;</span>
-                <span style="font-weight:bold">}</span>
-            <span style="font-weight:bold">}</span>
-        <span style="font-weight:bold">}</span> <span style="font-weight:bold">catch</span> <span style="font-weight:bold">(</span>IOException e<span style="font-weight:bold">)</span> <span style="font-weight:bold">{</span>
-            e<span style="font-weight:bold">.</span><span style="color:#008080">printStackTrace</span><span style="font-weight:bold">(</span><span style="font-weight:bold">)</span><span style="font-weight:bold">;</span>
-        <span style="font-weight:bold">}</span>
-    <span style="font-weight:bold">}</span>
-<span style="font-weight:bold">}</span>
-
-</code></pre></div></p>
+<p><img src="/img/posts/jline2.gif" alt="demo"></p>
+<p><a href="https://github.com/yan-lang/interactive-shell">GitHub</a></p></p>
 </article>
  
 
@@ -371,8 +314,7 @@ LineReader reader <span style="font-weight:bold">=</span> LineReaderBuilder<span
         </li>
         <li><a href="#扩展内容">扩展内容</a>
           <ul>
-            <li><a href="#linereaderoption">LineReader.option</a></li>
-            <li><a href="#linereadervariable">LineReader.variable</a></li>
+            <li><a href="#option--variable">Option & Variable</a></li>
             <li><a href="#自动缩进">自动缩进</a></li>
           </ul>
         </li>
