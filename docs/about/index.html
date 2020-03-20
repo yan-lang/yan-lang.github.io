@@ -4,25 +4,29 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="关于言"><meta property="og:title" content="关于言" />
+<meta name="description" content="关于&quot;言&rdquo; 言(Yan)是一款面向编译原理教学的实践平台。该项目致力于改善&quot;初次接触编译原理课程的同学&quot;编写第一个编译器&amp;解释器时的编程体验，并为学生与老师提供一个功能较为完善的自动评测系统。
+该项目包含数个子项目:
+   Yan Foundation (Working in Progress)是一个编写编译器&amp;解释器的框架，它封装了许多编写任意语言编译器时都需要的一些实用模块，如命令行参数处理，文本IO，交互式命令行(REPL)，格式化输出工具和出错处理等。通过该框架，学生能够在学习完理论知识后，结合框架编写少量代码，即可迅速完成一个“比较那么回事”的一个编译器ˉ
+   Yan Language (Working in Progress)是为了阐述Foundation用法设计的一个微型编程语言，我们利用Foundation框架为Yan语言编写了一个简易的编译器和解释器。
+   Token util 是一个协助老师为词法分析器生成统一的Token类型的工具。
+  该项目目前正在开发之中，目前已经基本完成词法以及语法分析器框架部分的开发，欢迎下载我们的Beta版本进行体验。"><meta property="og:title" content="关于言" />
 <meta property="og:description" content="关于&quot;言&rdquo; 言(Yan)是一款面向编译原理教学的实践平台。该项目致力于改善&quot;初次接触编译原理课程的同学&quot;编写第一个编译器&amp;解释器时的编程体验，并为学生与老师提供一个功能较为完善的自动评测系统。
 该项目包含数个子项目:
-  Yan Foundation(Working in Progress)是一个编写编译器&amp;解释器的框架，它封装了许多编写任意语言编译器时都需要的一些实用模块，如命令行参数处理，文本IO，交互式命令行(REPL)，格式化输出工具和出错处理等。通过该框架，学生能够在学习完理论知识后，结合框架编写少量代码，即可迅速完成一个“比较那么回事”的一个编译器ˉ
-  Yan Language(Working in Progress)是为了阐述Foundation用法设计的一个微型编程语言，我们利用Foundation框架为Yan语言编写了一个简易的编译器和解释器。
-  Token util是一个协助老师为词法分析器生成统一的Token类型的工具。
+   Yan Foundation (Working in Progress)是一个编写编译器&amp;解释器的框架，它封装了许多编写任意语言编译器时都需要的一些实用模块，如命令行参数处理，文本IO，交互式命令行(REPL)，格式化输出工具和出错处理等。通过该框架，学生能够在学习完理论知识后，结合框架编写少量代码，即可迅速完成一个“比较那么回事”的一个编译器ˉ
+   Yan Language (Working in Progress)是为了阐述Foundation用法设计的一个微型编程语言，我们利用Foundation框架为Yan语言编写了一个简易的编译器和解释器。
+   Token util 是一个协助老师为词法分析器生成统一的Token类型的工具。
   该项目目前正在开发之中，目前已经基本完成词法以及语法分析器框架部分的开发，欢迎下载我们的Beta版本进行体验。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://yan-lang.github.io/docs/about/" />
-<meta property="article:modified_time" content="2020-02-01T14:46:41+08:00" />
+<meta property="article:modified_time" content="2020-03-20T17:47:19+08:00" />
 <title>关于言 | Yan</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
 
-<link rel="stylesheet" href="/book.min.905d60b54d0f3f48fa8f7381e59247991913eee3bc984871847651849e1d1f70.css" integrity="sha256-kF1gtU0PP0j6j3OB5ZJHmRkT7uO8mEhxhHZRhJ4dH3A=">
+<link rel="stylesheet" href="/book.min.c7581a2e1de6eed07113f18f910647ba3c8a0c2b2aa4f4155855e8e0cb24838e.css" integrity="sha256-x1gaLh3m7tBxE/GPkQZHujyKDCsqpPQVWFXo4Mskg44=">
 
 
-<script defer src="/cn.search.min.f60560136dcbfbaa6dba61b9306f8c2c99ccefd4d475b8fd8f11673faef23f49.js" integrity="sha256-9gVgE23L&#43;6ptumG5MG&#43;MLJnM79TUdbj9jxFnP67yP0k="></script>
+<script defer src="/cn.search.min.ab6b82dd93bfe1df41b29a0dad066f0f9c05af73040f2a95581d3b97e3baa591.js" integrity="sha256-q2uC3ZO/4d9BspoNrQZvD5wFr3MEDyqVWB07l&#43;O6pZE="></script>
 
 <!--
 Made with Book Theme
@@ -54,33 +58,66 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+
+
+
   <ul>
 <li>
 <ul>
-<li><a href="/docs/about/"class=active>关于&quot;言&rdquo;</a></li>
-<li><a href="/posts/">博客</a></li>
-<li><a href="/docs/download/">下载安装</a></li>
-<li><a href="/docs/quick-start/">快速开始</a></li>
-<li><a href="/docs/doc/">文档</a></li>
-<li><a href="/docs/source/">源代码</a></li>
-<li><a href="/docs/contributing/">贡献</a></li>
+<li>
+  <a href="/docs/about/"class=active>关于&quot;言&rdquo;</a>
+</li>
+<li>
+  <a href="/posts/">博客</a>
+</li>
+<li>
+  <a href="/docs/download/">下载安装</a>
+</li>
+<li>
+  <a href="/docs/quick-start/">快速开始</a>
+</li>
+<li>
+  <a href="https://yan-lang.github.io/docs/">文档</a>
+</li>
+<li>
+  <a href="/docs/source/">源代码</a>
+</li>
+<li>
+  <a href="/docs/contributing/">贡献</a>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>实验</strong></p>
 <ul>
-<li><a href="/docs/shortcodes/buttons/">YCC框架</a></li>
+<li>
+  <a href="https://yan-lang.github.io/ycc/">YCC框架</a>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>项目</strong></p>
 <ul>
-<li><a href="https://github.com/yan-lang/yan/tree/master/foundation">Yan Foundation</a></li>
-<li><a href="https://github.com/yan-lang/yan/tree/master/yan-lang">Yan Lang</a></li>
-<li><a href="https://github.com/yan-lang/token-util">Token Util</a></li>
+<li>
+  <a href="https://github.com/yan-lang/yan/tree/master/foundation">Yan Foundation</a>
+</li>
+<li>
+  <a href="https://github.com/yan-lang/yan/tree/master/yan-lang">Yan Lang</a>
+</li>
+<li>
+  <a href="https://github.com/yan-lang/token-util">Token Util</a>
+</li>
 </ul>
 </li>
 </ul>
+
+
+
+
+
 
 
 
@@ -89,15 +126,10 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
 
  
     </aside>
@@ -123,76 +155,43 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="关于言">关于&quot;言&rdquo;</h1>
+      
+  <article class="markdown"><h1 id="关于言">关于&quot;言&rdquo;</h1>
 <p>言(Yan)是一款面向编译原理教学的实践平台。该项目致力于改善&quot;初次接触编译原理课程的同学&quot;编写第一个编译器&amp;解释器时的编程体验，并为学生与老师提供一个功能较为完善的自动评测系统。</p>
 <p>该项目包含数个子项目:</p>
 <ol>
 <li>
-<p><a href="https://github.com/yan-lang/yan">Yan Foundation</a>(Working in Progress)是一个编写编译器&amp;解释器的框架，它封装了许多编写任意语言编译器时都需要的一些实用模块，如命令行参数处理，文本IO，交互式命令行(REPL)，格式化输出工具和出错处理等。通过该框架，学生能够在学习完理论知识后，结合框架编写少量代码，即可迅速完成一个“比较那么回事”的一个编译器ˉ</p>
+<p>
+  <a href="https://github.com/yan-lang/yan">Yan Foundation</a>
+(Working in Progress)是一个编写编译器&amp;解释器的框架，它封装了许多编写任意语言编译器时都需要的一些实用模块，如命令行参数处理，文本IO，交互式命令行(REPL)，格式化输出工具和出错处理等。通过该框架，学生能够在学习完理论知识后，结合框架编写少量代码，即可迅速完成一个“比较那么回事”的一个编译器ˉ</p>
 </li>
 <li>
-<p><a href="https://github.com/yan-lang/yan">Yan Language</a>(Working in Progress)是为了阐述Foundation用法设计的一个微型编程语言，我们利用Foundation框架为Yan语言编写了一个简易的编译器和解释器。</p>
+<p>
+  <a href="https://github.com/yan-lang/yan">Yan Language</a>
+(Working in Progress)是为了阐述Foundation用法设计的一个微型编程语言，我们利用Foundation框架为Yan语言编写了一个简易的编译器和解释器。</p>
 </li>
 <li>
-<p><a href="https://github.com/yan-lang/token-util">Token util</a>是一个协助老师为词法分析器生成统一的Token类型的工具。</p>
+<p>
+  <a href="https://github.com/yan-lang/token-util">Token util</a>
+是一个协助老师为词法分析器生成统一的Token类型的工具。</p>
 </li>
 </ol>
 <p>该项目目前正在开发之中，目前已经基本完成词法以及语法分析器框架部分的开发，欢迎下载我们的Beta版本进行体验。</p>
 </article>
  
+      
 
       <footer class="book-footer">
         
   <div class="flex justify-between">
 
-  
-
-
-  
-
-  
-
-
-  
-
-
-<div class="book-languages">
-
-  <ul>
-    <li class="flex">
-      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-      简体中文
-    </li> 
-  </ul>
-
-  <ul class="book-languages-list">
-    
-    <li class="active">
-      <a href="https://yan-lang.github.io/" class="flex">
-        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-        简体中文
-      </a>
-    </li>
-    
-    <li class="">
-      <a href="https://yan-lang.github.io/en/docs/about/" class="flex">
-        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-        English
-      </a>
-    </li>
-    
-  </ul>
-
-</div>
-
-
 
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/yan-lang/yanlang-website/commit/db02464fcdd2bb34c01b00fd9759a0fd7127ce1f" title='Last modified by laizeqiang | Feb 1, 2020' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/yan-lang/yanlang-website/commit/07595f93f0ed5bd4c6da2e27557caaecf298e134" title='最后修改者 Zeqiang-Lai | Mar 20, 2020' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>Feb 1, 2020</span>
+      <span>Mar 20, 2020</span>
     </a>
   </div>
 
@@ -202,14 +201,17 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     

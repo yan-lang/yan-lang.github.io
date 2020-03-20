@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://yan-lang.github.io/en/sitemap.xml</loc>
-		
-	   	<lastmod>2020-02-02T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://yan-lang.github.io/cn/sitemap.xml</loc>
-		
-	   	<lastmod>2020-02-02T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/picocli-tutorial/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/plagiarism/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/ansi-code/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/jline-tutorial/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/syntax-highlight-in-hugo/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/hugo-tutorial/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/categories/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/categories/Tutorials/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/categories/Hugo/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/contributing/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/doc/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/experiment/ycc/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/inprogress/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/source/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/compiler-framework/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/posts/online-judge/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/download/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/about/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/docs/quick-start/</loc>
+    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+  </url>
+  
+</urlset>
