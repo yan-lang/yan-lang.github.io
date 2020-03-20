@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Yan</title>
+    <link>https://yan-lang.github.io/en/</link>
+    <description>Recent content in Introduction on Yan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yan-lang.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Picocli Tutorial</title>
+      <link>https://yan-lang.github.io/en/posts/picocli-tutorial/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/picocli-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://picocli.info&#34;&gt;Picocli&lt;/a&gt;是一个用Java编写的命令行参数解析库。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tools for Plagiarims Detection</title>
+      <link>https://yan-lang.github.io/en/posts/plagiarism/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/plagiarism/</guid>
+      <description>moss
+jplag
+sim</description>
+    </item>
+    
+    <item>
+      <title>ANSI Escape Code</title>
+      <link>https://yan-lang.github.io/en/posts/ansi-code/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/ansi-code/</guid>
+      <description>&lt;p&gt;The way that most programs interact with the Unix terminal is through ANSI escape codes. These are special codes that your program can print in order to give the terminal instructions. Various terminals support different subsets of these codes, and it&amp;rsquo;s difficult to find a &amp;ldquo;authoritative&amp;rdquo; list of what every code does. Wikipedia has a reasonable listing of them, as do many other sites.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html&#34;&gt;Build your own Command Line with ANSI escape codes&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JLine Tutorial</title>
+      <link>https://yan-lang.github.io/en/posts/jline-tutorial/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/jline-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/jline/jline3&#34;&gt;JLine&lt;/a&gt;是一个Java版的&lt;code&gt;GNU ReadLine&lt;/code&gt;，通过它，我们可以很方便的实现一个多功能的命令行程序，支持历史记录，光标移动，自动补全，多行编辑，高亮等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Syntax Highlight for Yan in Hugo</title>
+      <link>https://yan-lang.github.io/en/posts/syntax-highlight-in-hugo/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/syntax-highlight-in-hugo/</guid>
+      <description>&lt;p&gt;为了能让文档阅读起来更顺畅，更美观，我们通常会高亮文档中出现的代码。Hugo使用高亮器&lt;a href=&#34;&#34;&gt;chroma&lt;/a&gt;来对代码进行分析实现代码高亮，但是chroma不支持我们自己定义的语言Yan。&lt;/p&gt;
+&lt;blockquote class=&#34;book-hint info&#34;&gt;
+  另一种高亮器是Pygments, 但是Hugo自0.6版本后就删除了使用pygments作为高亮器的选项。
+&lt;/blockquote&gt;
+
+&lt;p&gt;为了能让Hugo支持高亮Yan语言，我们可以修改chroma或Pygments让它们支持高亮Yan语言，再重新编译Hugo，安装，但是，这种方法太麻烦了。因此，这里我们采用另一种方式进行workaround。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://yan-lang.github.io/en/posts/hugo-tutorial/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/hugo-tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/docs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/docs/about/</guid>
+      <description>About Yan </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/docs/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/docs/code/</guid>
+      <description>Source Code </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/docs/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/docs/contributing/</guid>
+      <description>Contributing </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/docs/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/docs/download/</guid>
+      <description>Download MacOS  MacOS This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes. Miseratus fonte Ditis conubia.
+ Linux  Linux This is tab Linux content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/docs/get_start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/docs/get_start/</guid>
+      <description>Getting Started Download the precompiled jar file Yan.jar.zip.
+Open a terminal, and type the following command (requires JRE)
+java -jar yan.jar This command will launch the Yan interpreter, and you can type in any code Yan supports.
+Have a try by yourself !
+Language Guide To print a string &amp;ldquo;Hello, world.&amp;rdquo; on the screen, just type in the following statement.
+print(&amp;#34;hello, world&amp;#34;);  A semicolon is required at the end of each line.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/posts/compiler-framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/compiler-framework/</guid>
+      <description>Design note 如何给语言添加IO功能
+ Adding a function call in my IR code in llvm llvm - How to implement print function in my language? How To Call @printf in LLVM through the module builder system  private char skipWhitespace(char ch) { while (true) { if (ch == &amp;#39; &amp;#39; || ch == &amp;#39;\t&amp;#39; || ch == &amp;#39;\n&amp;#39;) ch = buffer.next(); else break; } return ch; } 改写buffer.peek()
+public boolean peek(char ch) { if(peek() == ch) { next(); return true; } return false; } // To public boolean peek(char.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yan-lang.github.io/en/posts/online-judge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/online-judge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

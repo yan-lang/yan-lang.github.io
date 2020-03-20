@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on Yan</title>
+    <link>https://yan-lang.github.io/en/categories/Tutorials/</link>
+    <description>Recent content in Tutorials on Yan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yan-lang.github.io/en/categories/Tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Picocli Tutorial</title>
+      <link>https://yan-lang.github.io/en/posts/picocli-tutorial/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/picocli-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://picocli.info&#34;&gt;Picocli&lt;/a&gt;是一个用Java编写的命令行参数解析库。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tools for Plagiarims Detection</title>
+      <link>https://yan-lang.github.io/en/posts/plagiarism/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/plagiarism/</guid>
+      <description>moss
+jplag
+sim</description>
+    </item>
+    
+    <item>
+      <title>JLine Tutorial</title>
+      <link>https://yan-lang.github.io/en/posts/jline-tutorial/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/jline-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/jline/jline3&#34;&gt;JLine&lt;/a&gt;是一个Java版的&lt;code&gt;GNU ReadLine&lt;/code&gt;，通过它，我们可以很方便的实现一个多功能的命令行程序，支持历史记录，光标移动，自动补全，多行编辑，高亮等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://yan-lang.github.io/en/posts/hugo-tutorial/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/en/posts/hugo-tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

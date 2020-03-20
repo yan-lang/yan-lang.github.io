@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 
 <head>
-	<meta name="generator" content="Hugo 0.62.2" />
+	<meta name="generator" content="Hugo 0.65.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Introduction"><meta property="og:title" content="Introduction" />
+<meta name="description" content="介绍"><meta property="og:title" content="介绍" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yan-lang.github.io/" />
 
-<title>Introduction | Yan</title>
+<title>介绍 | Yan</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
 
-<link rel="stylesheet" href="/book.min.29a44f6b0f8dc44454463097afb8d467ebe88d0c0fdc542e2a42ebe35ef6ecfd.css" integrity="sha256-KaRPaw&#43;NxERURjCXr7jUZ&#43;vojQwP3FQuKkLr41727P0=">
+<link rel="stylesheet" href="/book.min.905d60b54d0f3f48fa8f7381e59247991913eee3bc984871847651849e1d1f70.css" integrity="sha256-kF1gtU0PP0j6j3OB5ZJHmRkT7uO8mEhxhHZRhJ4dH3A=">
 
 
-<script defer src="/en.search.min.0441368588e4d049adfff2e2f4cf9e1ffd1c5ed9a710cca1f64fb484d1db5afb.js" integrity="sha256-BEE2hYjk0Emt//Li9M&#43;eH/0cXtmnEMyh9k&#43;0hNHbWvs="></script>
+<script defer src="/cn.search.min.f60560136dcbfbaa6dba61b9306f8c2c99ccefd4d475b8fd8f11673faef23f49.js" integrity="sha256-9gVgE23L&#43;6ptumG5MG&#43;MLJnM79TUdbj9jxFnP67yP0k="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://yan-lang.github.io/index.xml" title="Yan" />
 <!--
@@ -41,7 +42,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -53,27 +54,27 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li>
 <ul>
-<li><a href="/docs/about/">About Yan</a></li>
-<li><a href="/posts/">Blog</a></li>
-<li><a href="/docs/download/">Download</a></li>
-<li><a href="/docs/get_start/">Getting Started</a></li>
-<li><a href="https://yan-lang.github.io/yan-tutorial/">Documentation</a></li>
-<li><a href="/docs/code/">Source Code</a></li>
-<li><a href="/docs/contributing/">Contributing</a></li>
+<li><a href="/docs/about/">关于&quot;言&rdquo;</a></li>
+<li><a href="/posts/">博客</a></li>
+<li><a href="/docs/download/">下载安装</a></li>
+<li><a href="/docs/quick-start/">快速开始</a></li>
+<li><a href="/docs/doc/">文档</a></li>
+<li><a href="/docs/source/">源代码</a></li>
+<li><a href="/docs/contributing/">贡献</a></li>
 </ul>
 </li>
 <li>
-<p><strong>Labs</strong></p>
+<p><strong>实验</strong></p>
 <ul>
-<li><a href="/docs/contributing/">Starter Code</a></li>
+<li><a href="/docs/shortcodes/buttons/">YCC框架</a></li>
 </ul>
 </li>
 <li>
-<p><strong>Projects</strong></p>
+<p><strong>项目</strong></p>
 <ul>
-<li><a href="/docs/contributing/">Compiler</a></li>
-<li><a href="/docs/contributing/">REPL</a></li>
-<li><a href="/docs/contributing/">Plugins</a></li>
+<li><a href="https://github.com/yan-lang/yan/tree/master/foundation">Yan Foundation</a></li>
+<li><a href="https://github.com/yan-lang/yan/tree/master/yan-lang">Yan Lang</a></li>
+<li><a href="https://github.com/yan-lang/token-util">Token Util</a></li>
 </ul>
 </li>
 </ul>
@@ -106,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Introduction</strong>
+  <strong>介绍</strong>
 
   <label for="toc-control">
     <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -119,8 +120,81 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="welcome-to-yan">Welcome to Yan</h1>
-<p>Yan is an educational programming language, which is designed for the purpose of practices of <em>Compiler Principle</em> and its related courses.</p>
+<article class="markdown"><h1 id="欢迎使用言">欢迎使用&quot;言&rdquo;</h1>
+<p><strong>什么是&quot;言&rdquo;？</strong></p>
+<ul>
+<li>
+<p>对于学生，言是一个编译器框架，它将帮助学生通过少量代码，编写一个很<strong>酷</strong>的编译器&amp;解释器 -&gt; <a href="https://github.com/yan-lang/yan">Yan Foundation</a></p>
+</li>
+<li>
+<p>对于老师，言是一个编译原理课程作业的评测平台。使用Yan Foudation编写的编译器可以通过我们的一个在线评测平台进行评测，判断实现是否正确，并给出错误报告。-&gt; <a href="https://www.zeqianglai.cn">Online Judge System</a></p>
+</li>
+</ul>
+<p><strong>为什么要使用它？</strong></p>
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
+  <label for="tabs-uniqueid-0">
+    学生
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>当你在编写你的第一个编译器的时候，你可能会想“为什么我写的编译器和我常用的Java，C，Python的编译器&amp;解释器那么不一样呢？。</p>
+<ul>
+<li>我要怎么样写出像Javac，GCC那样可以在命令行配置选项，指定输入输出的编译器？，又或者我要怎么样才能写出像Python那样的可以实时运行，支持历史记录等功能的交互式解释器？</li>
+<li>在完成你的编译原理课程作业时，你可能还要输出中间结果到XML,JSON,亦或是其他某种格式。不熟悉Java的你可能又发愁了，我要怎么样才能输出成那样呢？</li>
+<li>我要怎么用才能&hellip;</li>
+</ul>
+<p>通过言编译器框架，上述功能的实现都将变得极其简单。</p>
+<blockquote class="book-hint info">
+  事实上，实现第一点，你只需要编写两行代码，实现第二点，你甚至不需要编写代码
+</blockquote>
+<p>你不需要花费大量的时间在这些与编译原理其实关系不大的地方，你需要做的只是编写各种分析的核心逻辑，例如词法分析的nextToken函数，语法分析的parse函数。</p>
+<hr>
+<p>想要体验一下？-&gt; <a href="/docs/quick-start/">快速开始</a></p>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
+  <label for="tabs-uniqueid-1">
+    老师
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>在编译原理的教学过程中，也许你想要让每个学生都实现一个编译器作为练习，让学生把<strong>理论应用到实践</strong>中去。但是问题是，面对几十甚至几百位学生的编译器实现，后期的批改可能成为你的一大负担，甚至一项不可能完成的任务，而这些问题的根源主要就是有以下几点:</p>
+<ol>
+<li>学生编写编译器的目标语言可能五花八门。</li>
+<li>学生提交的程序/代码很难运行起来，甚至无法运行。</li>
+<li>学生输出的结果格式不一，很难判断学生写的代码是否正确。</li>
+<li>学生人数众多，逐一批改不太现实。</li>
+</ol>
+<p>“言”项目的诞生就是为了解决上述问题。</p>
+<blockquote class="book-hint info">
+  你可以通过约束学生实现指定一种语言解决问题1，然后使用我们的框架解决其他问题。
+</blockquote>
+<ul>
+<li>使用我们的编译器框架(Yan foundation)编写的编译器保证可以通过一个标准编译执行过程进行运行(解决2）；</li>
+<li>利用编译器框架提供的代码生成工具，你可以提前生成好你指定语言的词法单词的类型定义（一些int常量），语法树的结构定义（一些java类），学生编写词法分析器，语法分析器等编译器阶段的时候，创建好预先定义好的类的对象，即可通过编译器框架获得统一的输出样式（解决3）。</li>
+<li>基于这些统一的输出文件和我们，我们提供一个在线评测平台可以将学生的输出与标准编译器的输出进行比较判分，并提供一个评测报告。</li>
+</ul>
+<p><strong>总结来说</strong></p>
+<p>使用我们的框架定制编译原理实践需要以下三步:</p>
+<ul>
+<li>选取一种语言，指定规范。</li>
+<li>根据规范，使用我们提供的工具生成词法单词类型和语法树的数据结构定义。</li>
+<li>完成这种语言的标准实现（如果你要自动评测的话）。</li>
+</ul>
+<p>如果你不想或没有时间定制，你也可以使用我们定制好的C语言实验框架。</p>
+<hr>
+<p>定制你自己的实验框架？-&gt; <a href="/docs/inprogress/">框架定制</a></p>
+<p>使用我们编写好的一个C语言实验框架？-&gt; <a href="/docs/experiment/ycc/">YCC框架</a></p>
+
+  </div>
+
+</div>
+
 </article>
  
 
@@ -144,21 +218,21 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li class="flex">
       <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-      English
+      简体中文
     </li> 
   </ul>
 
   <ul class="book-languages-list">
     
-    <li class="">
-      <a href="https://yan-lang.github.io/cn/" class="flex">
+    <li class="active">
+      <a href="https://yan-lang.github.io/" class="flex">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         简体中文
       </a>
     </li>
     
-    <li class="active">
-      <a href="https://yan-lang.github.io/" class="flex">
+    <li class="">
+      <a href="https://yan-lang.github.io/en/" class="flex">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get Start"><meta property="og:title" content="" />
+<meta property="og:description" content="Getting Started Download the precompiled jar file Yan.jar.zip.
+Open a terminal, and type the following command (requires JRE)
+java -jar yan.jar This command will launch the Yan interpreter, and you can type in any code Yan supports.
+Have a try by yourself !
+Language Guide To print a string &ldquo;Hello, world.&rdquo; on the screen, just type in the following statement.
+print(&#34;hello, world&#34;);  A semicolon is required at the end of each line." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yan-lang.github.io/en/docs/get_start/" />
+
+<title>Get Start | Yan</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+<link rel="stylesheet" href="/book.min.905d60b54d0f3f48fa8f7381e59247991913eee3bc984871847651849e1d1f70.css" integrity="sha256-kF1gtU0PP0j6j3OB5ZJHmRkT7uO8mEhxhHZRhJ4dH3A=">
+
+
+<script defer src="/en.search.min.019bc63f0aa212930b05814cb407942554ccd4ac5abd419e0c8e064be9e5ad6c.js" integrity="sha256-AZvGPwqiEpMLBYFMtAeUJVTM1KxavUGeDI4GS&#43;nlrWw="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/en"><img src="/logo.png" alt="Logo" /><span>Yan</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+  <ul>
+<li>
+<ul>
+<li><a href="/en/docs/about/">About Yan</a></li>
+<li><a href="/en/posts/">Blog</a></li>
+<li><a href="/en/docs/download/">Download</a></li>
+<li><a href="/en/docs/get_start/"class=active>Getting Started</a></li>
+<li><a href="https://yan-lang.github.io/yan-tutorial/">Documentation</a></li>
+<li><a href="/en/docs/code/">Source Code</a></li>
+<li><a href="/en/docs/contributing/">Contributing</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Labs</strong></p>
+<ul>
+<li><a href="/en/docs/contributing/">Starter Code</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Projects</strong></p>
+<ul>
+<li><a href="/en/docs/contributing/">Compiler</a></li>
+<li><a href="/en/docs/contributing/">REPL</a></li>
+<li><a href="/en/docs/contributing/">Plugins</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Get Start</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#language-guide">Language Guide</a>
+          <ul>
+            <li><a href="#variable">Variable</a></li>
+            <li><a href="#control-flow">Control Flow</a></li>
+            <li><a href="#function">Function</a></li>
+            <li><a href="#expression">Expression</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+<article class="markdown"><h1 id="getting-started">Getting Started</h1>
+<p>Download the precompiled jar file <a href="https://github.com/Zeqiang-Lai/Yan/files/3963356/Yan.jar.zip">Yan.jar.zip</a>.</p>
+<p>Open a terminal, and type the following command (requires JRE)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar yan.jar
+</code></pre></div><p>This command will launch the Yan interpreter, and you can type in any code Yan supports.</p>
+<p>Have a try by yourself !</p>
+<h2 id="language-guide">Language Guide</h2>
+<p>To print a string &ldquo;Hello, world.&rdquo; on the screen, just type in the following statement.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">print(<span style="color:#b84">&#34;hello, world&#34;</span>);
+</code></pre></div><ul>
+<li>A semicolon is required at the end of each line. This will make parsing a little easier for beginners.</li>
+</ul>
+<h3 id="variable">Variable</h3>
+<p>To define a variable in Yan, you can use <code>var</code> keyword.</p>
+<p>Like C, Yan is a strongly typed language, the type of every variable should be able to be determined at compiling stage.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="font-weight:bold">var</span> <span style="color:#008080">a</span>:int = <span style="color:#099">3</span>; 
+</code></pre></div><p>In the example above, you define an <code>int</code> varaible <code>a</code> with the <code>initial value = 3</code>.</p>
+<p>You can also omit type specificier <code>int</code>, the compiler will automaticly infer the proper type for you.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="font-weight:bold">var</span> <span style="color:#008080">a</span> = <span style="color:#099">3</span>;  <span style="color:#998;font-style:italic">// int</span>
+<span style="font-weight:bold">var</span> <span style="color:#008080">s</span> = <span style="color:#b84">&#34;Hello, world&#34;</span>; <span style="color:#998;font-style:italic">// string</span>
+<span style="font-weight:bold">var</span> <span style="color:#008080">c</span> = <span style="color:#099">4.5</span>;  <span style="color:#998;font-style:italic">// float</span>
+</code></pre></div><p>If you omit the type specificier, you must provide a initial value for the variable. Otherwise, the compiler could not infer the type.</p>
+<p><strong>All types supported by Yan</strong>: int, float, string, char, bool</p>
+<h3 id="control-flow">Control Flow</h3>
+<p>Use <code>if</code> to make conditionals, and use <code>while</code> to make loops. Both of parentheses around the condition or loop variable and braces around the body are required.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="font-weight:bold">if</span>(a <span style="font-weight:bold">&gt;</span> b) {
+	print(a);
+} <span style="font-weight:bold">else</span> {
+	print(b);
+}
+</code></pre></div><p>In an <code>if</code> statement, the conditional must be able to be evaluated as an integer, any value except zero will be considered as <code>true</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a = <span style="color:#099">10</span>;
+<span style="font-weight:bold">while</span>(a <span style="font-weight:bold">&gt;</span> <span style="color:#099">0</span>) {
+	print(a)
+	a <span style="font-weight:bold">-=</span> <span style="color:#099">1</span>;
+}
+</code></pre></div><p>The requirement for loop variable is the same as it is for conditional of <code>if</code> statement.</p>
+<p>You can also you <code>break</code> and <code>continue</code> in loop body.</p>
+<h3 id="function">Function</h3>
+<p>Use <code>func</code> to declare a function, and use <code>-&gt;</code> to sperate the parameter names and types from the function&rsquo;s return type.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="font-weight:bold">func</span> <span style="color:#900;font-weight:bold">f</span>(x: int) -&gt; int {
+	<span style="font-weight:bold">if</span>(x == <span style="color:#099">1</span> <span style="font-weight:bold">||</span> x == <span style="color:#099">2</span>) {
+		<span style="font-weight:bold">return</span> <span style="color:#099">1</span>;
+	}
+	<span style="font-weight:bold">return</span> f(x<span style="font-weight:bold">-</span><span style="color:#099">1</span>) <span style="font-weight:bold">+</span> f(x<span style="font-weight:bold">-</span><span style="color:#099">2</span>);
+}
+</code></pre></div><p>Call a function by following its name with a list of arguments in parentheses.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">print(f(<span style="color:#099">10</span>));
+</code></pre></div><h3 id="expression">Expression</h3>
+<ol>
+<li>Assignment</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a = <span style="color:#099">10</span>;
+</code></pre></div><ol start="2">
+<li>Logical expression</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a <span style="font-weight:bold">||</span> b;
+c <span style="font-weight:bold">&amp;&amp;</span> d;
+</code></pre></div><ol start="3">
+<li>Equality and comparsion</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a <span style="font-weight:bold">!=</span> b;
+c == d;
+a <span style="font-weight:bold">&gt;=</span> b; c <span style="font-weight:bold">&gt;</span> d;
+a <span style="font-weight:bold">&lt;=</span> b; c <span style="font-weight:bold">&lt;</span> d;
+</code></pre></div><ol start="4">
+<li>Arithmetic experssion</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a <span style="font-weight:bold">+</span> b; a <span style="font-weight:bold">-</span> b;
+a <span style="font-weight:bold">*</span> b; a <span style="font-weight:bold">/</span> b;
+</code></pre></div><ol start="5">
+<li>type casting</li>
+</ol>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">a = (int)b;
+</code></pre></div><p>For formal language specification, please refer to <a href="https://github.com/Zeqiang-Lai/Yan/blob/master/docs/language_specification.md">Language Specification</a>.</p>
+</article>
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+  
+
+
+  
+
+  
+
+
+
+<div class="book-languages">
+
+  <ul>
+    <li class="flex">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="">
+      <a href="https://yan-lang.github.io/" class="flex">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        简体中文
+      </a>
+    </li>
+    
+    <li class="active">
+      <a href="https://yan-lang.github.io/en/" class="flex">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+  </ul>
+
+</div>
+
+
+
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#language-guide">Language Guide</a>
+          <ul>
+            <li><a href="#variable">Variable</a></li>
+            <li><a href="#control-flow">Control Flow</a></li>
+            <li><a href="#function">Function</a></li>
+            <li><a href="#expression">Expression</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
