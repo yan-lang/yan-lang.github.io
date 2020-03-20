@@ -63,23 +63,13 @@
   </url>
   
   <url>
-    <loc>https://yan-lang.github.io/yan/contributing/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yan-lang.github.io/yan/doc/</loc>
-  </url>
-  
-  <url>
     <loc>https://yan-lang.github.io/yan/experiment/ycc/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://yan-lang.github.io/yan/inprogress/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yan-lang.github.io/yan/source/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
   <url>
@@ -87,24 +77,38 @@
   </url>
   
   <url>
+    <loc>https://yan-lang.github.io/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yan-lang.github.io/yan/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://yan-lang.github.io/yan/download/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yan-lang.github.io/</loc>
-    <lastmod>2020-03-20T17:47:19+08:00</lastmod>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://yan-lang.github.io/yan/about/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://yan-lang.github.io/yan/quick-start/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/yan/source/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yan-lang.github.io/yan/contributing/</loc>
+    <lastmod>2020-03-20T23:28:13+08:00</lastmod>
   </url>
   
 </urlset>
