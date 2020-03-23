@@ -5,10 +5,19 @@
     <link>https://yan-lang.github.io/categories/Tutorials/</link>
     <description>Recent content in Tutorials on Yan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yan-lang.github.io/categories/Tutorials/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maven Tutorial</title>
+      <link>https://yan-lang.github.io/posts/maven/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yan-lang.github.io/posts/maven/</guid>
+      <description>&lt;p&gt;Maven真的是看上去难，学了之后感觉还行，还行之后又觉得难。被Maven的发布(Deployment)整的晕头转向，赶紧在这里记录一下过程，免得到时候忘了。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Picocli Tutorial</title>

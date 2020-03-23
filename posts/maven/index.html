@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maven真的是看上去难，学了之后感觉还行，还行之后又觉得难。被Maven的发布(Deployment)整的晕头转向，赶紧在这里记录一下过程，免得到时候忘了。"><meta property="og:title" content="Maven Tutorial" />
+<meta property="og:description" content="Maven真的是看上去难，学了之后感觉还行，还行之后又觉得难。被Maven的发布(Deployment)整的晕头转向，赶紧在这里记录一下过程，免得到时候忘了。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yan-lang.github.io/posts/maven/" />
+<meta property="article:published_time" content="2020-03-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-23T21:47:56+08:00" />
+<title>Maven Tutorial | Yan</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.c7581a2e1de6eed07113f18f910647ba3c8a0c2b2aa4f4155855e8e0cb24838e.css" integrity="sha256-x1gaLh3m7tBxE/GPkQZHujyKDCsqpPQVWFXo4Mskg44=">
+
+
+<script defer src="/cn.search.min.e844de78c99e63c54214c1fdb66863be3b0585850e7efd17bed2d4e8b4fcd231.js" integrity="sha256-6ETeeMmeY8VCFMH9tmhjvjsFhYUOfv0XvtLU6LT80jE="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><img src="/logo.png" alt="Logo" /><span>Yan</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li>
+<ul>
+<li>
+  <a href="/yan/about/">关于&quot;言&rdquo;</a>
+</li>
+<li>
+  <a href="/posts/">博客</a>
+</li>
+<li>
+  <a href="/yan/download/">下载安装</a>
+</li>
+<li>
+  <a href="/yan/quick-start/">快速开始</a>
+</li>
+<li>
+  <a href="https://yan-lang.github.io/docs/">文档</a>
+</li>
+<li>
+  <a href="/yan/source/">源代码</a>
+</li>
+<li>
+  <a href="/yan/contributing/">贡献</a>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>实验</strong></p>
+<ul>
+<li>
+  <a href="https://yan-lang.github.io/ycc/">YCC框架</a>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>项目</strong></p>
+<ul>
+<li>
+  <a href="https://github.com/yan-lang/yan/tree/master/foundation">Yan Foundation</a>
+</li>
+<li>
+  <a href="https://github.com/yan-lang/yan/tree/master/yan-lang">Yan Lang</a>
+</li>
+<li>
+  <a href="https://github.com/yan-lang/token-util">Token Util</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Maven Tutorial</strong>
+
+  <label for="toc-control">
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简介">简介</a></li>
+        <li><a href="#基础用法">基础用法</a></li>
+        <li><a href="#发布">发布</a>
+          <ul>
+            <li><a href="#发布到central">发布到Central</a></li>
+            <li><a href="#发布到github-package">发布到Github Package</a></li>
+          </ul>
+        </li>
+        <li><a href="#问题">问题</a>
+          <ul>
+            <li><a href="#javadoc-unnamed-module">Javadoc unnamed module</a></li>
+            <li><a href="#javadoc-enable-preview">Javadoc Enable-Preview</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/maven/">Maven Tutorial</a>
+  </h1>
+  
+
+  <h5>Mar 23, 2020</h5>
+
+
+
+  
+  <div>
+    
+        <a href="/categories/Tutorials/">Tutorials</a>
+  </div>
+  
+
+  
+
+
+  <p><p>Maven真的是看上去难，学了之后感觉还行，还行之后又觉得难。被Maven的发布(Deployment)整的晕头转向，赶紧在这里记录一下过程，免得到时候忘了。</p>
+<h2 id="简介">简介</h2>
+<p>Maven这个东西可以用的很复杂，但是我们没这需求，所以对这东西，我们把他当成一个编译工具就好（实际也是233）。</p>
+<p>想象一下我们写了一个Java项目，我们希望能够编译，测试，打包，发布这个项目。不用构建工具的话，通常编译是比较简单的，一般用IDE按个按钮就行了，打包就稍微麻烦一点，测试没试过不知道，发布就很麻烦了，想象一下，我们每次发布都要手动执行编译，测试，打包，上传到某个网站，真的很麻烦。</p>
+<p>另外，如果我们的项目有很多依赖的话也是很麻烦的，不用构建工具的话，你得自己去下载jar包，导到你用的IDE里，如果要和别人合作的话，另一个人也得弄一遍，实在是麻烦。</p>
+<p>Maven就是自动化这些过程的一个工具。</p>
+<h2 id="基础用法">基础用法</h2>
+<p>最简单的用法就是用Idea新建一个Maven项目，它会自动帮你建好Maven需要的目录结构。</p>
+<blockquote class="book-hint info">
+  Maven对目录结构是有一个默认要求的，一般来说是根目录有个pom.xml（maven的配置文件），然后代码放在src里，src里还有有源码和测试代码等等，具体不说了。
+</blockquote>
+
+<p>一般来说，你就是要在<code>pom.xml</code>写一些配置，指明你的项目的名字版本，依赖有啥，构建的时候有什么要求之类的。</p>
+<p>当然，你也可以创建submodule（就是子项目），比如你有一个很大的项目，你想把公共代码提取出来作为一个模块，这时submodule就有用了。</p>
+<p>具体的用法以后再补充了，下面先说怎么发布你的项目到中央仓库（这样别人就可以下载你的库/程序）。</p>
+<h2 id="发布">发布</h2>
+<h3 id="发布到central">发布到Central</h3>
+<h3 id="发布到github-package">发布到Github Package</h3>
+<p>在你能够发布到Central之后，基本只需要简单配置一下就可以发布到Github Package了。</p>
+<p>参考链接:
+<a href="https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages">https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages</a></p>
+<p>如果要用Github Package的话，在你的pom.xml里加入类似的配置:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;repositories&gt;</span>
+    <span style="color:#000080">&lt;repository&gt;</span>
+        <span style="color:#000080">&lt;id&gt;</span>github<span style="color:#000080">&lt;/id&gt;</span>
+        <span style="color:#000080">&lt;name&gt;</span>GitHub Yan Apache Maven Packages<span style="color:#000080">&lt;/name&gt;</span>
+        <span style="color:#000080">&lt;url&gt;</span>https://maven.pkg.github.com/yan-lang/yan<span style="color:#000080">&lt;/url&gt;</span>
+        <span style="color:#000080">&lt;releases&gt;&lt;enabled&gt;</span>true<span style="color:#000080">&lt;/enabled&gt;&lt;/releases&gt;</span>
+        <span style="color:#000080">&lt;snapshots&gt;&lt;enabled&gt;</span>true<span style="color:#000080">&lt;/enabled&gt;&lt;/snapshots&gt;</span>
+    <span style="color:#000080">&lt;/repository&gt;</span>
+<span style="color:#000080">&lt;/repositories&gt;</span>
+
+<span style="color:#000080">&lt;dependencies&gt;</span>
+    <span style="color:#000080">&lt;dependency&gt;</span>
+        <span style="color:#000080">&lt;groupId&gt;</span>com.github.yan-lang<span style="color:#000080">&lt;/groupId&gt;</span>
+        <span style="color:#000080">&lt;artifactId&gt;</span>yan-foundation<span style="color:#000080">&lt;/artifactId&gt;</span>
+        <span style="color:#000080">&lt;version&gt;</span>0.1.2<span style="color:#000080">&lt;/version&gt;</span>
+    <span style="color:#000080">&lt;/dependency&gt;</span>
+<span style="color:#000080">&lt;/dependencies&gt;</span>
+</code></pre></div><p>除此之外，还要在<code>.m2/settings.xml</code>中配置GITHUB_TOKEN。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;settings</span> <span style="color:#008080">xmlns=</span><span style="color:#b84">&#34;http://maven.apache.org/SETTINGS/1.0.0&#34;</span>
+  <span style="color:#008080">xmlns:xsi=</span><span style="color:#b84">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+  <span style="color:#008080">xsi:schemaLocation=</span><span style="color:#b84">&#34;http://maven.apache.org/SETTINGS/1.0.0
+</span><span style="color:#b84">                      http://maven.apache.org/xsd/settings-1.0.0.xsd&#34;</span><span style="color:#000080">&gt;</span>
+  <span style="color:#000080">&lt;servers&gt;</span>
+    <span style="color:#000080">&lt;server&gt;</span>
+      <span style="color:#000080">&lt;id&gt;</span>github<span style="color:#000080">&lt;/id&gt;</span>
+      <span style="color:#000080">&lt;username&gt;</span>你的Github用户名<span style="color:#000080">&lt;/username&gt;</span>
+      <span style="color:#000080">&lt;password&gt;</span>你的Github Personal access Token<span style="color:#000080">&lt;/password&gt;</span>
+    <span style="color:#000080">&lt;/server&gt;</span>
+  <span style="color:#000080">&lt;/servers&gt;</span>
+<span style="color:#000080">&lt;/settings&gt;</span>
+</code></pre></div><h2 id="问题">问题</h2>
+<h3 id="javadoc-unnamed-module">Javadoc unnamed module</h3>
+<p>发布的时候一定要有Javadoc，但是老是遇到这个问题:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="font-weight:bold">[</span>ERROR<span style="font-weight:bold">]</span> Failed to execute goal org.apache.maven.plugins:maven-javadoc-plugin:3.0.1:jar <span style="font-weight:bold">(</span>attach-javadocs<span style="font-weight:bold">)</span> on project ldp-testsuite: MavenReportException: Error <span style="font-weight:bold">while</span> generating Javadoc: 
+<span style="font-weight:bold">[</span>ERROR<span style="font-weight:bold">]</span> Exit code: <span style="color:#099">1</span> - javadoc: error - The code being documented uses modules but the packages defined in https://docs.oracle.com/javase/8/docs/api/ are in the unnamed module.
+</code></pre></div><p>找了一天快崩溃了，终于在Github上找到解决方案:</p>
+<ul>
+<li><a href="https://github.com/w3c/ldp-testsuite/issues/234#issuecomment-517231144">https://github.com/w3c/ldp-testsuite/issues/234#issuecomment-517231144</a></li>
+<li><a href="https://github.com/assertj/assertj-parent-pom/commit/9b521bc33ac81b9a809de39c00599a9f928934d8">https://github.com/assertj/assertj-parent-pom/commit/9b521bc33ac81b9a809de39c00599a9f928934d8</a></li>
+</ul>
+<p>但是！事实上是我submodule的parent的version写错了！！！</p>
+<h3 id="javadoc-enable-preview">Javadoc Enable-Preview</h3>
+<p>Maven生成javadoc的时候，对java13的switch expression老是报错，叫我们加enable-preview。
+一开始不知道怎么加，后面终于找到解决方案，如下。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;plugin&gt;</span>
+    <span style="color:#000080">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#000080">&lt;/groupId&gt;</span>
+    <span style="color:#000080">&lt;artifactId&gt;</span>maven-javadoc-plugin<span style="color:#000080">&lt;/artifactId&gt;</span>
+    <span style="color:#000080">&lt;version&gt;</span>3.1.1<span style="color:#000080">&lt;/version&gt;</span>
+    <span style="color:#000080">&lt;configuration&gt;</span>
+        <span style="color:#000080">&lt;additionalJOptions&gt;</span>
+            <span style="color:#000080">&lt;additionalJOption&gt;</span>--enable-preview<span style="color:#000080">&lt;/additionalJOption&gt;</span>
+            <span style="color:#000080">&lt;additionalJOption&gt;</span>--release<span style="color:#000080">&lt;/additionalJOption&gt;</span>
+            <span style="color:#000080">&lt;additionalJOption&gt;</span>13<span style="color:#000080">&lt;/additionalJOption&gt;</span>
+        <span style="color:#000080">&lt;/additionalJOptions&gt;</span>
+    <span style="color:#000080">&lt;/configuration&gt;</span>
+<span style="color:#000080">&lt;/plugin&gt;</span>
+</code></pre></div><p>参考资料:</p>
+<ul>
+<li><a href="http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#additionalOptions">http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#additionalOptions</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/11/tools/javadoc.html">https://docs.oracle.com/en/java/javase/11/tools/javadoc.html</a></li>
+</ul></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/yan-lang/yanlang-website/commit/5b3bbc479dad53732f5a59f99759fa0f0525e674" title='最后修改者 Zeqiang-Lai | Mar 23, 2020' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Mar 23, 2020</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简介">简介</a></li>
+        <li><a href="#基础用法">基础用法</a></li>
+        <li><a href="#发布">发布</a>
+          <ul>
+            <li><a href="#发布到central">发布到Central</a></li>
+            <li><a href="#发布到github-package">发布到Github Package</a></li>
+          </ul>
+        </li>
+        <li><a href="#问题">问题</a>
+          <ul>
+            <li><a href="#javadoc-unnamed-module">Javadoc unnamed module</a></li>
+            <li><a href="#javadoc-enable-preview">Javadoc Enable-Preview</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
